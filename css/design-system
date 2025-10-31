@@ -1,0 +1,35 @@
+/* css/design-system/_variables.css */
+
+:root {
+    /* Cores Primárias (ONG) */
+    --cor-primaria-base: #007bff;        /* Azul Principal */
+    --cor-primaria-clara: #66b0ff;       /* Claro para hover/fundo */
+    --cor-primaria-escura: #0056b3;      /* Escura para botões ativos */
+
+    /* Cores Secundárias (Apoio, Sucesso, Feedback) */
+    --cor-secundaria-base: #28a745;      /* Verde para Sucesso/Doação */
+    --cor-erro: #dc3545;                 /* Vermelho para validação */
+    --cor-alerta: #ffc107;               /* Amarelo para alerta */
+
+    /* Cores Neutras */
+    --cor-fundo: #f8f9fa;                /* Fundo claro geral */
+    --cor-fundo-card: #ffffff;           /* Fundo do card/container */
+    --cor-texto: #343a40;                /* Preto quase total para acessibilidade */
+    --cor-borda: #dee2e6;                /* Cinza para bordas e linhas */
+
+    /* TIPOGRAFIA */
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-h1: 3.5rem;
+    --tamanho-h2: 2.5rem;
+    --tamanho-h3: 1.75rem;
+    --tamanho-p: 1rem;
+    --tamanho-small: 0.8rem;
+
+    /* ESPAÇAMENTO MODULAR (8px-grid) */
+    --espaco-xs: 8px;     /* Múltiplo 1 */
+    --espaco-s: 16px;     /* Múltiplo 2 */
+    --espaco-m: 24px;     /* Múltiplo 3 */
+    --espaco-l: 32px;     /* Múltiplo 4 */
+    --espaco-xl: 48px;    /* Múltiplo 6 */
+    --espaco-xxl: 64px;   /* Múltiplo 8 */
+}

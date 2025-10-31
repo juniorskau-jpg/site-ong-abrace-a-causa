@@ -1,0 +1,94 @@
+/* css/style.css */
+
+/* 1. Importa as variáveis */
+@import url('design-system/_variables.css');
+
+/* 2. Reset Básico (Melhor para colocar em _base.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    /* Grid para estrutura geral */
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* 3. Layout Principal (Grid/Container) */
+.header, .footer, #app-content section, #app-content article {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaco-m) 0;
+}
+
+/* 4. Layout Header com Flexbox (Mobile-First) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo-card);
+}
+
+.header nav ul {
+    list-style: none;
+    /* Menu Hambúrguer (Mobile) - Escondido por padrão, será mostrado pelo JS */
+    display: none; 
+}
+
+/* 5. Componente Botão */
+.cta-button {
+    background-color: var(--cor-primaria-base);
+    color: var(--cor-fundo-card);
+    padding: var(--espaco-s) var(--espaco-m);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background-color: var(--cor-primaria-escura);
+}
+/* Acessibilidade: Estado de Foco */
+.cta-button:focus {
+    box-shadow: 0 0 0 3px var(--cor-primaria-clara); 
+    outline: none;
+}
+
+/* 6. Breakpoint Tablet (Mínimo 768px) */
+@media (min-width: 768px) {
+    /* Header (Flexbox para alinhar nav horizontalmente) */
+    .header nav ul {
+        display: flex;
+        gap: var(--espaco-l);
+    }
+    .menu-hamburguer {
+        display: none; /* Esconde o botão no desktop */
+    }
+    
+    /* Layout de 12 Colunas (Exemplo em uma seção) */
+    .grid-12-cols {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--espaco-s);
+    }
+    
+    /* Form (Exemplo de Flexbox interno) */
+    #cadastro-form fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espaco-m);
+    }
+    #cadastro-form fieldset > div {
+        flex: 1 1 calc(50% - var(--espaco-m)); /* 2 colunas no tablet */
+    }
+}
